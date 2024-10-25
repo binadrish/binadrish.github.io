@@ -1,0 +1,562 @@
+/* --------------------------------------------------- */
+/* Reset de estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-principal: #27343C;
+    --color-hover: #3e525f;    
+    --color-secundario: #94D3CE;  
+    --color-fondo: #C9CFCF;       
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--color-fondo); /* Color gris claro de fondo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 10px; /* Espacio suficiente para el header fijo */
+    color: #f1f5f9;
+}
+
+div{
+    padding-top: 10px;
+}
+
+header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 60% 1fr; /* Tres columnas: la del centro será del 60% del ancho */
+    position: sticky;
+    top: 0;
+    align-items: center; /* Centrar verticalmente el contenido en cada celda */
+}
+
+.header-container {
+    grid-column: 2 / 3; /* Asegura que el contenedor esté en la segunda columna */
+    display: flex;
+    justify-content:space-between; /* Espacio entre el título y el nav */
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-principal); /* Fondo oscuro */
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight:normal;
+    color: #f1f5f9; /* Color blanco para el texto del título */
+}
+
+/* Estilo del navbar */
+nav {
+    background-color: #27343C; /* Color de fondo */
+}
+
+.navbar {
+    list-style: none; /* Quitar los puntos de lista */
+    display: flex;
+    justify-content: center; /* Centrar los elementos del navbar */
+    gap: 15px; /* Espacio entre los elementos */
+}
+
+.navbar li {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.navbar li a {
+    text-decoration: none; /* Quitar el subrayado */
+    color: #f1f5f9; /* Color de los enlaces */
+    padding: 5px; /* Espaciado dentro de los enlaces */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px; /* Bordes redondeados */
+
+}
+
+.navbar li a:hover {
+    background-color: #3e525f; /* Color al pasar el mouse */
+    color: #94D3CE; /* Cambia el color del texto al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.language-picker{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.language-picker label{
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+.language-picker-form select{
+    margin-top: 5px;
+    padding: 5px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+/* --------------------------------------------------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    width: 100%;
+}
+
+/* Contenedor principal */
+.desc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    max-width: 1000px;
+    min-width: 700px;
+    width: 60%;
+    /* Para pantallas más pequeñas */
+    background-color: var(--color-principal); /* Fondo oscuro */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.post {
+
+    padding: 20px;
+    margin-bottom: 20px;
+
+    
+}
+
+.post-image {
+
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.post-image a {
+
+    text-decoration: none;
+    padding: 10px;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+.social-icons i{
+color: var(--color-fondo);
+}
+
+.social-icons i:hover{
+    color: var(--color-secundario);
+}
+
+
+
+.post h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-secundario); /* Color verde claro */
+}
+
+.post p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Estilo del footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333f48;
+    width: 100%;
+    color: #f1f5f9;
+    margin-top: auto; /* Empuja el footer al fondo del contenedor flex */
+}
+
+
+
+/* Estilo del footer */
+footer a {
+    text-decoration: none; /* Quitar subrayado */
+    color: inherit; /* Tomar el color del texto */
+    transition: color 0.3s ease, transform 0.3s ease; /* Añadir transición */
+}
+
+footer a:hover {  
+    color: var(--color-secundario); /* Cambia al color secundario al pasar el mouse */
+    transform: scale(1.1); /* Escalar el enlace al pasar el mouse */
+}
+
+.language {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+/* Contenedor del formulario */
+.log-in {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo del encabezado */
+.log-in h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilos del formulario */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Botón de envío */
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-principal);
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-hover);
+
+}
+
+/*blog_admin_posts ----------------------------------------------------------------------------------------*/
+
+.logout-content{
+    display: flex;
+    justify-content:flex-start;
+}
+
+.logout{
+    list-style: none;
+    padding: 20px;
+
+   }
+
+.logout a{
+    text-decoration: none;
+    background-color: #ff3636;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--color-fondo);
+    color: #f1f5f9;
+
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+
+}
+
+.posts h1{
+    color: var(--color-principal);
+
+}
+
+.posts-list {
+    list-style: none; /* Quitar los puntos de la lista */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px; /* Espacio entre los elementos */
+    margin: 20px;
+    max-height: 400px; /* Altura máxima de 400px */
+    background-color: var(--color-hover);
+    overflow-y: auto; /* Activar el scroll vertical */
+    width: 100%; /* Asegurarse de que ocupe todo el ancho disponible */
+    border-radius: 10px;
+}
+
+
+ .post-item-container{
+    background-color: var(--color-principal);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+
+}
+
+.post-item{
+    color: var(--color-fondo);
+}
+
+
+/*portafolio ----------------------------------------------------------------------------------------*/
+
+.puesto{
+    font-size:1em;
+    color:#ae94d3;
+}
+
+.skills{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 700px;
+    width: 60%;
+    max-width: 1000px;
+    color: #27343C;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .skills h2{
+    margin-top: 1rem;
+  }
+
+  .tag-cloud {
+    display: inline-block;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    background-color: var(--color-principal);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    margin: 5px;
+  }
+
+  .tag-cloud:hover {
+    background-color: var(--color-hover);
+  }
+
+   /* Style the container with a rounded border, grey background and some padding and margin */
+.container {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+
+  }
+  
+  /* Clear floats after containers */
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+  .container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  /* Increase the font-size of a span element */
+  .container span {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+  /* Add media queries for responsiveness. This will center both the text and the image inside the container */
+  @media (max-width: 500px) {
+    .container {
+      text-align: center;
+    }
+  
+    .container img {
+      margin: auto;
+      float: none;
+      display: block;
+    }
+  } 
+
+
+  div.gallery {
+    width: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  div.gallery:hover {
+    background-color: var(--color-secundario);
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+
+  .more{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--color-principal);
+    margin: 10px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+
+  }
+  .more:hover{
+ 
+    background-color: var(--color-secundario);
+
+  }
+  
+  div.desc-gallery {
+    padding: 15px;
+    text-align: center;
+    color: var(--color-principal);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+    width: 100%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /*contacto*/
+
+  .contact {
+    width: 60%;
+    margin-bottom: 50px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.contact label {
+    margin-top: 10px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0077B5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-contact {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-contact a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #0077B5;
+    font-size: 1.2em;
+}
+
+.social-contact .social-icons i{
+    color: var(--color-principal);
+}
+
+.social-contact .social-icons i:hover{
+    color: var(--color-hover);
+}
