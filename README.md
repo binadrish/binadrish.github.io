@@ -1,1 +1,0 @@
-# binadrish.github.io
