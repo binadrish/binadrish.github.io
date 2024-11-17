@@ -7,14 +7,14 @@
 }
 
 :root {
-    --color-principal: #27343C;
-    --color-hover: #3e525f;    
-    --color-secundario: #94D3CE;  
-    --color-fondo: #C9CFCF;       
+    --color-principal: #25415C;
+    --color-hover: #65819C;    
+    --color-secundario: #5dadec;  
+    --color-fondo:#A5C1DC;       
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Inter",'Courier New', Courier, monospace;
     background-color: var(--color-fondo); /* Color gris claro de fondo */
     display: flex;
     flex-direction: column;
@@ -50,8 +50,8 @@ header {
 }
 
 .title {
-    font-size: 2rem;
-    font-weight:normal;
+    font-size: 2.5rem; /* Ajusta el tamaño de la fuente según lo que necesites */
+    font-weight: bold;
     color: #f1f5f9; /* Color blanco para el texto del título */
 }
 
@@ -387,8 +387,7 @@ footer a:hover {
 
    /* Style the container with a rounded border, grey background and some padding and margin */
 .container {
-    border: 2px solid #ccc;
-    background-color: #eee;
+    background-color: #F1F5F9;
     border-radius: 5px;
     padding: 16px;
     margin-top: 2rem;
@@ -433,18 +432,14 @@ footer a:hover {
 
   div.gallery {
     width: 50%;
-    border: 1px solid #ccc;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;
   }
   
-  div.gallery:hover {
-    background-color: var(--color-secundario);
-  }
+
   
   div.gallery img {
     width: 100%;
@@ -457,11 +452,12 @@ footer a:hover {
     align-items: center;
     flex-direction: column;
     text-decoration: none;
-    color: var(--color-principal);
+    color: white;
     margin: 10px;
-    padding: 5px;
+    padding: 15px;
     width: 100%;
     border-radius: 10px;
+    background-color: var(--color-hover);
 
   }
   .more:hover{
@@ -473,7 +469,7 @@ footer a:hover {
   div.desc-gallery {
     padding: 15px;
     text-align: center;
-    color: var(--color-principal);
+    color: white;
   }
   
   * {
@@ -481,11 +477,15 @@ footer a:hover {
   }
   
   .responsive {
+    border-radius: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     flex-wrap: wrap;
     padding: 2rem;
     width: 100%;
+    background-color: var(--color-principal);
+    margin-top: 25px;
+
   }
   
   @media only screen and (max-width: 700px) {
@@ -559,4 +559,20 @@ footer a:hover {
 
 .social-contact .social-icons i:hover{
     color: var(--color-hover);
+}
+
+
+/*mapeum ------------------------------------------------------------------*/
+
+.mapa-container {
+    width: 100%;
+}
+
+#mapa-svg path {
+    fill: #680d0d; /* Color inicial */
+}
+
+object {
+    width: 100%;
+    height: auto;
 }
