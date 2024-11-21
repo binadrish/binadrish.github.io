@@ -27,19 +27,8 @@
     </header>
 
     <main>
-        <article class="posts">
-            <div class="post-title">
-            <h2>{{ page.title }}</h2>
-            <p class="date">{{ page.date | date: "%d de %B, %Y" }}</p>
-            <p class="author">{{page.author}}</p>
-            <p class="author">{{page.categories}}</p>
-
-            </div>
-            <div class="content">
-                {{ content }}
-            </div>
-        </article>
-    </main>
+        {{ content }}
+    </main> 
 
     <footer>
         <p>&copy; {{ site.time | date: "%Y" }}</p>

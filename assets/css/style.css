@@ -297,36 +297,6 @@ footer a:hover {
 
 }
 
-.posts{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-
-}
-
-.posts h1{
-    color: var(--color-principal);
-
-}
-
-.posts-list {
-    list-style: none; /* Quitar los puntos de la lista */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 25px; /* Espacio entre los elementos */
-    margin: 20px;
-    max-height: 400px; /* Altura máxima de 400px */
-    background-color: var(--color-hover);
-    overflow-y: auto; /* Activar el scroll vertical */
-    width: 100%; /* Asegurarse de que ocupe todo el ancho disponible */
-    border-radius: 10px;
-}
-
-
  .post-item-container{
     background-color: var(--color-principal);
     padding: 20px;
@@ -562,17 +532,39 @@ footer a:hover {
 }
 
 
-/*mapeum ------------------------------------------------------------------*/
+/*posts styles ------------------------------------------------------------------*/
 
-.mapa-container {
-    width: 100%;
+
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 
-#mapa-svg path {
-    fill: #680d0d; /* Color inicial */
+.post-title{
+    padding-top: 25px;
 }
 
-object {
-    width: 100%;
-    height: auto;
+.posts h2{
+    font-size: 3em;
+    color: var(--color-principal);
 }
+
+.date{
+    color: var(--color-hover);
+    font-size: 2em;
+
+}
+
+.author{
+    color: var(--color-principal);
+    font-size: 1.5em;
+}
+
+.content{
+    color: var(--color-principal);
+    font-size: 1.5em;
+    padding: 50px 0px;
+}
+

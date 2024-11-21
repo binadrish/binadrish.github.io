@@ -1,7 +1,10 @@
 title: Binadrish Blog
 author: Adrian Galvan R.
 description: Mi portafolio y blog
-theme: minima
-baseurl: "" # O el subdirectorio donde está el sitio, si aplica
+theme: null
+baseurl: "" 
 url: "https://binadrish.github.io" # URL de tu sitio
 permalink: /:title/
+markdown: kramdown
+kramdown:
+  input: GFM

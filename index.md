@@ -1,31 +1,10 @@
-<!DOCTYPE html>
+---
+layout: default
+---
+
+
+{% raw %}
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binadrish - Inicio</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    
-</head>
-
-<body>
-    <header>
-        <div class="header-container">
-            <h1 class="title">BIN<em>ADRI</em>SH</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="">Blog</a>
-                </li>
-            </ul>
-        </div>      
-        
-    </header>
-
-    <main>
         <div class="desc">
 
             <section class="post">
@@ -46,7 +25,7 @@
             </section>
 
             <section class="post_image">
-                <img src="static/images/adrian2.jpg" alt="AdrianGR" style="width:250px; border-radius: 50%;">
+                <img src="/assets/images/adrian2.jpg" alt="AdrianGR" style="width:250px; border-radius: 50%;">
                 <div class="social-icons" style="text-align:center; margin-top: 20px;">
                     <a href="https://github.com/binadrish" target="_blank" style="margin-right: 15px;">
                         <i class="fab fa-github" style="font-size: 1.5em;"></i>
@@ -65,19 +44,11 @@
             
         </div>
         
-        <ul class="blog-list">
-            {% for post in site.posts %}
-            <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-                <p>{{ post.excerpt }}</p>
-            </li>
-            {% endfor %}
-        </ul>
 
         <div class="skills">
             <h2>Experience</h2>
             <div class="container">
-                <img src="static/images/itp.png" alt="Avatar" style="width:90px">
+                <img src="/assets/images/itp.png" alt="Avatar" style="width:90px">
                 <p>dec. 2023 - jul. 2024</p>
                 <p>Computer Systems Assistant</p>
                 <p>ITP Computing Center</p>
@@ -96,28 +67,28 @@
             <div class="responsive">
                 <div class="gallery">
                     <a target="_blank" href="https://www.credly.com/badges/1d4ff898-737a-4f65-a3c4-e800e818306d/linked_in_profile">
-                    <img src="static/images/pythonDS.png" alt="aws " style="width:110px">
+                    <img src="/assets/images/pythonDS.png" alt="aws " style="width:110px">
                     </a>
                     <div class="desc-gallery">Python for Data Science</div>
                 </div>
 
                 <div class="gallery">
                     <a target="_blank" href="https://www.credly.com/badges/75670bd4-4142-483a-a840-b40b43ce85c4/linked_in_profile">
-                    <img src="static/images/pythonDA.png" alt="aws " style="width:110px">
+                    <img src="/assets/images/pythonDA.png" alt="aws " style="width:110px">
                     </a>
                     <div class="desc-gallery">Data Analysis Using Python</div>
                 </div>
 
                 <div class="gallery">
                     <a target="_blank" href="https://www.credly.com/badges/06a06710-5bc8-46ee-927c-035a382983a5/linked_in_profile">
-                    <img src="static/images/pythonDV.png" alt="aws " style="width:110px">
+                    <img src="/assets/images/pythonDV.png" alt="aws " style="width:110px">
                     </a>
                     <div class="desc-gallery">Data Visualization Using Python</div>
                 </div>
 
                 <div class="gallery">
                     <a target="_blank" href="https://www.credly.com/badges/f8c264a2-a77f-440f-bd4c-9f3b8ee80b4e/linked_in_profile">
-                    <img src="static/images/aws.png" alt="aws " style="width:110px">
+                    <img src="/assets/images/aws.png" alt="aws " style="width:110px">
                     </a>
                     <div class="desc-gallery">AWS Academy Cloud Foundations </div>
                 </div>
@@ -160,17 +131,9 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
-        
-    </main>
 
-    <footer>
 
-        <p>&copy; 2024 Adrian GR</p>
-
-    </footer>
-    
-</body>
-</html>
+{% endraw %}
 

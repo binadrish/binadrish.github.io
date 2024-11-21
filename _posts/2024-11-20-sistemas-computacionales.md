@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "Mi primer blog"
+title: "Sistemas computacionales"
+author: "Adrian Galvan R."
 date: 2024-11-20
-categories: [blog, personal]
+categories: [blog]
 ---
 
-#SistemasComputacionales
 Un **sistema computacional** es un conjunto de componentes que trabajan en conjunto para procesar y gestionar información. Está compuesto principalmente por hardware (los dispositivos físicos), software (los programas que controlan y gestionan el hardware) y el usuario (quien interactúa con el sistema). La interacción entre estos tres elementos permite la ejecución de tareas computacionales, como el procesamiento de datos, almacenamiento de información, y la ejecución de programas.
-
+<br>
+<br>
 En términos más detallados, un sistema computacional incluye:
 
 1. **Hardware**: Todo lo que es físicamente tangible, como la CPU, memoria RAM, discos duros, dispositivos de entrada y salida, etc.
