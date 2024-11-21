@@ -1,0 +1,7 @@
+title: Binadrish Blog
+author: Adrian Galvan R.
+description: Mi portafolio y blog
+theme: minima
+baseurl: "" # O el subdirectorio donde está el sitio, si aplica
+url: "http://127.0.0.1:4000" # URL de tu sitio
+permalink: /:title/
