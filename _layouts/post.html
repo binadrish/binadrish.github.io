@@ -18,22 +18,25 @@
             <h1 class="title">BIN<em>ADRI</em>SH</h1>
             <ul class="navbar">
                 <li>
-                    <a href="">Blog</a>
-                    <a href="">Portfolio</a>
+                    <a href="/blog">Blog</a>
+                    <a href="/portfolio">Portfolio</a>
                 </li>
             </ul>
         </div>      
         
     </header>
-
+    
     <main>
         <article class="posts">
-            <div class="post-title">
-            <h2>{{ page.title }}</h2>
-            <p class="date">{{ page.date | date: "%d de %B, %Y" }}</p>
-            <p class="author">{{page.author}}</p>
-            <p class="author">{{page.categories}}</p>
-
+            <div class="posts-head">
+                <div class="post-title">
+                <h2>{{ page.title }}</h2>
+                <p class="date">{{ page.date | date: "%B / %d / %Y" }}</p>
+                <p class="author">{{page.author}}</p>
+                </div>
+                {% if page.img %}
+                            <img src="{{ page.img }}" alt="{{ page.title }}">
+                {% endif %}  
             </div>
             <div class="content">
                 {{ content }}

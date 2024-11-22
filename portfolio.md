@@ -1,9 +1,9 @@
 ---
 layout: default
+title: "Binadrish - Porfolio"
 ---
 
 
-{% raw %}
 <html lang="es">
         <div class="desc">
 
@@ -135,5 +135,4 @@ layout: default
         </div>
 
 
-{% endraw %}
 
