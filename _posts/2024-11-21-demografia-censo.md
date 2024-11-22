@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Censos demográficos y su importancia"
-excerpt: "Un censo es un procedimiento de recopilación y registro de datos sobre la población de un país, región o comunidad en un momento específico."
+excerpt: "Repasamos conceptos relacionados a censos demográficos, y que datos podemos obtener de ellos"
 author: "Adrian Galvan R."
 date: 2024-11-21
 categories: [blog]

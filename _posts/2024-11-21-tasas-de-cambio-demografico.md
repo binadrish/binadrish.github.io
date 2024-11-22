@@ -5,7 +5,7 @@ excerpt: "Exploramos algunos tipos de tasas de cambio demográfico y sus causas"
 author: "Adrian Galvan R."
 date: 2024-11-21
 categories: [blog]
-img: "/assets/images/pst-minis/pst-2.jpg"
+img: "/assets/images/pst-minis/pst-3.jpg"
 ---
 
 

@@ -15,11 +15,11 @@
 <body>
     <header>
         <div class="header-container">
-            <h1 class="title">BIN<em>ADRI</em>SH</h1>
+            <h1 class="title"><a href="/">BIN<em>ADRI</em>SH</a></h1>
             <ul class="navbar">
                 <li>
                     <a href="/#blog">Blog</a>
-                    <a href="/portfolio">Portfolio</a>
+                    <a href="/about">Portfolio</a>
                 </li>
             </ul>
         </div>      
@@ -44,8 +44,27 @@
         </article>
     </main>
 
-    <footer>
-        <p>&copy; {{ site.time | date: "%Y" }}</p>
+    <footer class="contact">
+        <div class="social-contact" id="contact">
+            <div class="social-title" >
+                <p>Email: dev.adriangr@gmail.com</p>
+                <p>&copy; {{ site.time | date: "%Y" }} Hecho por <a href="/about">AdrianGR</a></p>
+            </div>
+            <div class="social-icons" style="text-align:center;">
+                <a href="https://github.com/binadrish" target="_blank" style="margin-right: 15px;">
+                    <i class="fab fa-github" style="font-size: 1.5em;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/dev-adriangr/" target="_blank" style="margin-right: 15px;">
+                    <i class="fab fa-linkedin" style="font-size: 1.5em;"></i>
+                </a>
+                <a href="https://medium.com/@dev.adriangr" target="_blank" style="margin-right: 15px;">
+                    <i class="fab fa-medium" style="font-size: 1.5em;"></i>
+                </a>
+                <a href="https://x.com/binadrish" target="_blank">
+                    <i class="fab fa-twitter" style="font-size: 1.5em;"></i>
+                </a>   
+            </div>
+        </div>
     </footer>
     
 </body>

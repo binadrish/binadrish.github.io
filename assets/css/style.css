@@ -10,7 +10,8 @@
     --color-principal: #25415C;
     --color-hover: #65819C;    
     --color-secundario: #5dadec;  
-    --color-fondo:#A5C1DC;       
+    --color-fondo:#A5C1DC;  
+    --white-color:#f1f5f9;  
 }
 
 body {
@@ -19,45 +20,43 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 100vh;
     padding-top: 10px; /* Espacio suficiente para el header fijo */
     color: #f1f5f9;
 }
 
-div{
-    padding-top: 10px;
-}
 
 header {
     width: 100%;
+    z-index: 1000; /* Asegura que el header quede por encima de otros elementos */
     display: grid;
     grid-template-columns: 1fr 60% 1fr; /* Tres columnas: la del centro será del 60% del ancho */
     position: sticky;
     top: 0;
     align-items: center; /* Centrar verticalmente el contenido en cada celda */
+    background-color: var(--color-principal); /* Fondo oscuro */
 }
+
 
 .header-container {
     grid-column: 2 / 3; /* Asegura que el contenedor esté en la segunda columna */
     display: flex;
     justify-content:space-between; /* Espacio entre el título y el nav */
     align-items: center;
-    padding: 20px;
-    background-color: var(--color-principal); /* Fondo oscuro */
+    padding: 10px;
     border-radius: 10px;
     flex-wrap: wrap;
 }
 
-.title {
+.hd-title {
     font-size: 2.5rem; /* Ajusta el tamaño de la fuente según lo que necesites */
     font-weight: bold;
-    color: #f1f5f9; /* Color blanco para el texto del título */
+
 }
 
-/* Estilo del navbar */
-nav {
-    background-color: #27343C; /* Color de fondo */
+ a{
+  color: var(--white-color);
 }
 
 .navbar {
@@ -78,33 +77,12 @@ nav {
     padding: 5px; /* Espaciado dentro de los enlaces */
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px; /* Bordes redondeados */
-
 }
 
 .navbar li a:hover {
     background-color: #3e525f; /* Color al pasar el mouse */
     color: #94D3CE; /* Cambia el color del texto al pasar el mouse */
     border-radius: 5px; /* Bordes redondeados */
-}
-
-.language-picker{
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.language-picker label{
-    color: var(--color-principal);
-    font-weight: bold;
-}
-
-.language-picker-form select{
-    margin-top: 5px;
-    padding: 5px;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
 }
 
 /* --------------------------------------------------- */
@@ -117,7 +95,7 @@ main {
     width: 100%;
 }
 
-/* Contenedor principal */
+/* portfolio --------------------------------*/
 .desc {
     display: flex;
     flex-direction: row;
@@ -171,7 +149,6 @@ color: var(--color-fondo);
 }
 
 
-
 .post h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -183,132 +160,6 @@ color: var(--color-fondo);
     font-size: 1.2rem;
     line-height: 1.5;
 }
-
-/* Estilo del footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333f48;
-    width: 100%;
-    color: #f1f5f9;
-    margin-top: auto; /* Empuja el footer al fondo del contenedor flex */
-}
-
-
-
-/* Estilo del footer */
-footer a {
-    text-decoration: none; /* Quitar subrayado */
-    color: inherit; /* Tomar el color del texto */
-    transition: color 0.3s ease, transform 0.3s ease; /* Añadir transición */
-}
-
-footer a:hover {  
-    color: var(--color-secundario); /* Cambia al color secundario al pasar el mouse */
-    transform: scale(1.1); /* Escalar el enlace al pasar el mouse */
-}
-
-.language {
-    margin-top: 10px;
-    font-size: 1rem;
-}
-
-/* ------------------------------------------------------------------------------------------------- */
-/* Contenedor del formulario */
-.log-in {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Estilo del encabezado */
-.log-in h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-}
-
-/* Estilos del formulario */
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.form-group label {
-    font-size: 14px;
-    color: #555;
-}
-
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.form-control:focus {
-    outline: none;
-    border-color: #007bff;
-}
-
-/* Botón de envío */
-.btn-primary {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--color-principal);
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: var(--color-hover);
-
-}
-
-/*blog_admin_posts ----------------------------------------------------------------------------------------*/
-
-.logout-content{
-    display: flex;
-    justify-content:flex-start;
-}
-
-.logout{
-    list-style: none;
-    padding: 20px;
-
-   }
-
-.logout a{
-    text-decoration: none;
-    background-color: #ff3636;
-    padding: 10px;
-    border-radius: 10px;
-    color: var(--color-fondo);
-    color: #f1f5f9;
-
-}
-
- .post-item-container{
-    background-color: var(--color-principal);
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-
-}
-
-.post-item{
-    color: var(--color-fondo);
-}
-
 
 /*portafolio ----------------------------------------------------------------------------------------*/
 
@@ -355,7 +206,6 @@ footer a:hover {
     background-color: var(--color-hover);
   }
 
-   /* Style the container with a rounded border, grey background and some padding and margin */
 .container {
     background-color: #F1F5F9;
     border-radius: 5px;
@@ -480,57 +330,53 @@ footer a:hover {
   /*contacto*/
 
   .contact {
-    width: 60%;
-    margin-bottom: 50px;
-}
-
-.contact form {
+    width: 100%;
+    background-color: var(--color-principal);
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0px;
 }
 
-.contact label {
-    margin-top: 10px;
-}
-
-.contact input, .contact textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #0077B5;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 .social-contact {
     text-align: center;
-    margin-top: 20px;
+    width: 70%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .social-contact a {
-    margin-right: 15px;
     text-decoration: none;
-    color: #0077B5;
     font-size: 1.2em;
 }
 
 .social-contact .social-icons i{
-    color: var(--color-principal);
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
 }
 
 .social-contact .social-icons i:hover{
     color: var(--color-hover);
 }
 
+.social-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: self-start;
+
+}
+
+.social-title a{
+  color: var(--color-secundario);
+}
 
 /*posts styles ------------------------------------------------------------------*/
 
@@ -539,7 +385,7 @@ footer a:hover {
 .posts{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
 }
 
 .posts-head img{
@@ -608,48 +454,134 @@ a{
     width: 25%;
 }
 
+/*Landing page --------------------------*/
+
+.landing-msg h2{
+  font-size: clamp(1.5rem,4.5vw + .5rem, 3rem);
+  color: var(--color-principal);
+  padding-bottom: 10px;
+}
+
+.landing-msg p{
+  font-size: clamp(1rem,1.5vw + .5rem, 2rem);
+  color: var(--color-principal);
+}
+
+.landing-img{
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+}
+
+.landing-msg-container{
+  padding: 40px;
+  width: 80%;
+}
+
+.landing-msg{
+  padding-bottom: 20px;
+}
+
+.blog-title-container{
+  margin: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.blog-title{
+  font-size: xx-large;
+  color: var(--color-principal);
+}
+
+.blog-title-description{
+  margin: 10px;
+  color: var(--color-principal);
+  font-size: larger;
+}
+
+
 /* posts-list*/
 
 .posts-list{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-flow: row wrap;
-  width: 60%;
+  width: 70%;
 }
 
 .pst-format-container{
-  width: 46%;
-  min-width: 250px;
-  padding: 0px;
+  width: 30%;
+  min-width: 300px;
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 10px;
+
 }
+
 
 .pst-format-container img{
   width: 100%;
   height: auto;
+  max-height: 300px;
+  margin: 0px;
+  padding: 0px;
+  transition: transform 0.3s ease; /* Suaviza la animación */
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+ 
+.pst-format-container:hover img {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen */
 }
 
 .pst-courses-item_title{
   color:#5DADEC;
-  font-size:x-large;
+  font-size:xx-large;
   font-weight: bold;
+  padding-bottom:20px ;
+}
+
+.pst-courses-item_date-box{
+  margin:0px;
+  padding: 0px;
 }
 
 .pst-courses-item_date{
   color: #AE94D3;
-
+  font-size:medium;
 }
 
 .pst-description{
-  color: var(--color-fondo);
-
+  color: var(--white-color);
 }
 
 .pst-header{
-  padding: 20px;
-  background-color: var(--color-principal);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  padding: 20px 20px;
+  height: 100%;
 }
+
+.ag-courses-item_link{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: var(--color-principal);
+  padding: 0px;
+  margin: 0px;
+  border-radius: 10px;
+}
+
+.ag-courses-item_link:hover .pst-courses-item_title{
+ color: #007bff;
+}
+
+.pst-img-containter{
+  padding: 0px;
+  margin: 0px;
+}
+
