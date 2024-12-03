@@ -43,6 +43,17 @@ title: "Binadrish - Porfolio"
         <div class="skills">
             <h2>Experience</h2>
             <div class="container">
+                <img src="/assets/images/syner.jpeg" alt="Avatar" style="width:90px">
+                <p>dec. 2024 - present.</p>
+                <p>Fullstack developer</p>
+                <p>Synersol</p>
+                <br>
+                <p>
+                    Currently working on the deployment of new web funcionalities, utilizing web development tools as
+                    HTML, CSS, Javascript, NodeJS, Python among others.
+                </p>
+            </div>
+            <div class="container">
                 <img src="/assets/images/itp.png" alt="Avatar" style="width:90px">
                 <p>dec. 2023 - jul. 2024</p>
                 <p>Computer Systems Assistant</p>
