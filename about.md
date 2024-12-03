@@ -49,8 +49,7 @@ title: "Binadrish - Porfolio"
                 <p>Synersol</p>
                 <br>
                 <p>
-                    Currently working on the deployment of new web funcionalities, utilizing web development tools as
-                    HTML, CSS, Javascript, NodeJS, Python among others.
+                    Currently engaged in the development and deployment of new web functionalities, leveraging modern web development technologies including HTML, CSS, JavaScript, Node.js, and Python. My role involves designing and implementing user-centric features, optimizing performance, and ensuring cross-platform compatibility to deliver seamless web experiences.
                 </p>
             </div>
             <div class="container">
