@@ -13,17 +13,18 @@ title: "Binadrish - Porfolio"
                 <h4 class="puesto">Software Developer | Data Researcher</h4>
                 <br>
                 <br>
-                <p>Computer Systems Engineer, specialized in developing applications
-                    focused on the collection, visualization, and analysis of data across
-                    various fields, utilizing tools such as MySQL, Python,
-                    and Power BI, among others.</p> <!-- Cambia 'descripcion' por el campo adecuado -->
+                <p>Ingeniero en Sistemas Computacionales, especializado en el desarrollo de aplicaciones
+                    enfocadas en la recopilación, visualización y análisis de datos en
+                    diversas áreas, utilizando herramientas como MySQL, Python
+                    y Power BI, entre otras.</p>
+ <!-- Cambia 'descripcion' por el campo adecuado -->
                 <br>
-                <p>My main interests include geointelligence,
-                    demographics, mobility and transportation, sports, and the development
-                    of technologies that enable data-driven decision-making.</p> <!-- Cambia 'interes' por el campo adecuado -->
+                <p>Mis principales intereses incluyen la geointeligencia,cartografía, la movilidad y el transporte, los deportes, y el desarrollo 
+                    de tecnologías que permitan la toma de decisiones basadas en datos.</p>
+ <!-- Cambia 'interes' por el campo adecuado -->
             </section>
             <section class="post_image">
-                <img src="/assets/images/adrian2.jpg" alt="AdrianGR" style="width:250px; border-radius: 50%;">
+                <img class="me_photo" src="/assets/images/adrian2.jpg" alt="AdrianGR">
                 <div class="social-icons" style="text-align:center; margin-top: 20px;">
                     <a href="https://github.com/binadrish" target="_blank" style="margin-right: 15px;">
                         <i class="fab fa-github" style="font-size: 1.5em;"></i>
@@ -41,7 +42,7 @@ title: "Binadrish - Porfolio"
             </section>
         </div>
         <div class="skills">
-            <h2>Experience</h2>
+            <h2>Experiencia</h2>
             <div class="container">
                 <img src="/assets/images/syner.jpeg" alt="Avatar" style="width:90px">
                 <p>dec. 2024 - present.</p>
@@ -55,18 +56,18 @@ title: "Binadrish - Porfolio"
             <div class="container">
                 <img src="/assets/images/itp.png" alt="Avatar" style="width:90px">
                 <p>dec. 2023 - jul. 2024</p>
-                <p>Computer Systems Assistant</p>
-                <p>ITP Computing Center</p>
+                <p>Auxiliar de sistemas computacionales</p>
+                <p>Centro de cómputo del ITP</p>
                 <br>
                 <p>
-                    During my time at the Computer Center of ITP, I performed both
-                    preventive and corrective maintenance on computing and network
-                    equipment (servers, racks, switches, clients), assisted in configuring
-                    access points, installed test servers with Linux, created UML Diagrams,
-                    documented protocols and reports.
+                    Durante mi tiempo en el Centro de Cómputo del ITP, realicé tanto 
+                    mantenimiento preventivo como correctivo en equipos de cómputo y redes 
+                    (servidores, racks, switches, clientes), ayudé en la configuración de 
+                    puntos de acceso, instalé servidores de prueba con Linux, creé diagramas UML, 
+                    y documenté protocolos e informes.
                 </p>
             </div>
-            <h2>Courses and Certification</h2>
+            <h2>Cursos y certificaciones</h2>
             <div class="responsive">
                 <div class="gallery">
                     <a target="_blank" href="https://www.credly.com/badges/1d4ff898-737a-4f65-a3c4-e800e818306d/linked_in_profile">
