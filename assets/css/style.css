@@ -108,15 +108,17 @@ main {
     width: 60%;
     /* Para pantallas más pequeñas */
     background-color: var(--color-principal); /* Fondo oscuro */
-    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    padding-top: 20px;
+
 }
 
 .post {
+  padding: 20px;
+
   min-width: 280px;
   width: 70%;
-  padding: 20px;
   margin-bottom: 20px;
 }
 
@@ -532,7 +534,7 @@ a{
 }
 
 .landing-msg-container{
-  padding: 40px;
+  padding: 20px;
   width: 80%;
 }
 
