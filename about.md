@@ -52,7 +52,6 @@ title: "Binadrish - Porfolio"
                 <p>
                     Actualmente involucrado en el desarrollo y despliegue de nuevas funcionalidades web, aprovechando tecnologías modernas de desarrollo web como HTML, CSS, JavaScript, Node.js y Python. Mi rol implica diseñar e implementar características centradas en el usuario, optimizar el rendimiento y garantizar la compatibilidad entre plataformas para ofrecer experiencias web fluidas.
                 </p>
-
             </div>
             <div class="container">
                 <img src="/assets/images/itp.png" alt="Avatar" style="width:90px">
@@ -72,25 +71,25 @@ title: "Binadrish - Porfolio"
             <div class="responsive">
                 <div class="gallery">
                     <a target="_blank" href="https://www.credly.com/badges/1d4ff898-737a-4f65-a3c4-e800e818306d/linked_in_profile">
-                    <img src="/assets/images/pythonDS.png" alt="aws " style="width:110px">
+                    <img src="/assets/images/pythonDS.png" alt="aws " style="width:100px">
                     </a>
                     <div class="desc-gallery">Python for Data Science</div>
                 </div>
                 <div class="gallery">
                     <a target="_blank" href="https://www.credly.com/badges/75670bd4-4142-483a-a840-b40b43ce85c4/linked_in_profile">
-                    <img src="/assets/images/pythonDA.png" alt="aws " style="width:110px">
+                    <img src="/assets/images/pythonDA.png" alt="aws " style="width:100px">
                     </a>
                     <div class="desc-gallery">Data Analysis Using Python</div>
                 </div>
                 <div class="gallery">
                     <a target="_blank" href="https://www.credly.com/badges/06a06710-5bc8-46ee-927c-035a382983a5/linked_in_profile">
-                    <img src="/assets/images/pythonDV.png" alt="aws " style="width:110px">
+                    <img src="/assets/images/pythonDV.png" alt="aws " style="width:100px">
                     </a>
                     <div class="desc-gallery">Data Visualization Using Python</div>
                 </div>
                 <div class="gallery">
                     <a target="_blank" href="https://www.credly.com/badges/f8c264a2-a77f-440f-bd4c-9f3b8ee80b4e/linked_in_profile">
-                    <img src="/assets/images/aws.png" alt="aws " style="width:110px">
+                    <img src="/assets/images/aws.png" alt="aws " style="width:100px">
                     </a>
                     <div class="desc-gallery">AWS Academy Cloud Foundations </div>
                 </div>
