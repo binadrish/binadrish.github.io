@@ -19,7 +19,7 @@
             <ul class="navbar">
                 <li>
                     <a href="/#blog">Blog</a>
-                    <a href="/about">Portfolio</a>
+                    <a href="/about">Acerca de</a>
                 </li>
             </ul>
         </div>      
@@ -29,14 +29,16 @@
     <main>
         <article class="posts">
             <div class="posts-head">
+                <div class="posts-img">
+                    {% if page.img %}
+                        <img src="{{ page.img }}" alt="{{ page.title }}">
+                    {% endif %}  
+                </div>
                 <div class="post-title">
                 <h2>{{ page.title }}</h2>
                 <p class="date">{{ page.date | date: "%B / %d / %Y" }}</p>
                 <p class="author">{{page.author}}</p>
                 </div>
-                {% if page.img %}
-                            <img src="{{ page.img }}" alt="{{ page.title }}">
-                {% endif %}  
             </div>
             <div class="content">
                 {{ content }}

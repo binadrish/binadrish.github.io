@@ -132,7 +132,7 @@ main {
 
 .me_photo{
   width:250px; 
-  border-radius: 5%;
+  border-radius: 35%;
 }
 
 .post-image a {
@@ -164,7 +164,7 @@ color: var(--color-fondo);
 }
 
 .post p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem,1.5vw + .5rem, 1.2rem);
     line-height: 1.5;
 }
 
@@ -223,6 +223,10 @@ color: var(--color-fondo);
     margin-bottom: 2rem;
     width: 100%;
   }
+
+  .container p {
+    font-size: clamp(0.8rem,1.5vw + .5rem, 1rem);
+  }
   
   /* Clear floats after containers */
   .container::after {
@@ -265,6 +269,7 @@ color: var(--color-fondo);
     align-items: center;
     border-radius: 20px;
     padding: 10px;
+    
   }
   
 
@@ -294,10 +299,12 @@ color: var(--color-fondo);
 
   }
   
-  div.desc-gallery {
+  .desc-gallery {
     padding: 15px;
     text-align: center;
     color: white;
+    font-size: clamp(0.5rem,1.5vw + .5rem, 1em);
+  
   }
   
   * {
@@ -313,7 +320,7 @@ color: var(--color-fondo);
     width: 100%;
     background-color: var(--color-principal);
     margin-top: 25px;
-
+    min-width: 375px;
   }
   
   @media only screen and (max-width: 700px) {
@@ -394,38 +401,67 @@ color: var(--color-fondo);
     display: flex;
     flex-direction: column;
     width: 70%;
+    min-width: 375px;
+    max-width: 600px;
 }
 
 .posts-head img{
+  height: 100%;
+  width: auto;
+  
+}
+
+.posts-img {
+  background-color: var(--color-principal);
   width: 100%;
   height: auto;
-  padding-top: 40px;
-  border-bottom-right-radius: 20px;
+  max-height:300px ;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
 
 .posts-head{
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
   align-content: center;
-  
+  flex-wrap: wrap;
+  min-width: 375px;
+  border-radius: 10px;
+
 }
 
 
 .post-title{
-  background-color: #5DADEC;
+  background-color: var(--color-secundario);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 20px;  
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  justify-content: space-evenly;
+  padding: 20px; 
+  margin-top: 10px; 
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  min-width: 300px;
 }
 
 .posts h2{
-    font-size: 3em;
+    font-size: clamp(1rem,1.5vw + 1rem, 5rem);
     color: var(--color-principal);
+    padding-bottom: 10px;
+}
+.posts .content{
+  font-size: clamp(1.2rem,1.5vw + .5rem, 1.4rem);
+}
+
+.posts-head p{
+  font-size: clamp(1.2rem,1.5vw + .5rem, 1.6rem);
+  padding-bottom: 10px;
 }
 
 .date{
@@ -442,7 +478,8 @@ color: var(--color-fondo);
 .content{
     color: var(--color-principal);
     font-size: 1.5em;
-    padding: 50px 0px;
+    padding: 25px 0px;
+    min-width: 375px;
 }
 
 .posts .content h2,h3{
@@ -465,13 +502,13 @@ a{
 /*Landing page --------------------------*/
 
 .landing-msg h2{
-  font-size: clamp(1.5rem,4.5vw + .5rem, 3rem);
+  font-size: clamp(2rem,4.5vw + .5rem, 3rem);
   color: var(--color-principal);
   padding-bottom: 10px;
 }
 
 .landing-msg p{
-  font-size: clamp(1rem,1.5vw + .5rem, 2rem);
+  font-size: clamp(1.2rem,1.5vw + .5rem, 1.8rem);
   color: var(--color-principal);
 }
 
@@ -479,6 +516,14 @@ a{
   width: 100%;
   overflow: hidden;
   height: 300px;
+  border-radius: 10px;
+}
+.landing-img img{
+  width: 100%;
+  height: auto;
+  min-width: 650px;
+  border-radius: 10px;
+
 }
 
 .landing-msg-container{
@@ -492,7 +537,7 @@ a{
 
 .blog-title-container{
   margin: 25px;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -507,7 +552,7 @@ a{
 .blog-title-description{
   margin: 10px;
   color: var(--color-principal);
-  font-size: larger;
+  font-size: clamp(1.2rem,1.5vw + .5rem, 1.8rem);
 }
 
 

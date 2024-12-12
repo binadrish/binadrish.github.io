@@ -18,7 +18,7 @@ title: "Binadrish - Blog"
     <div class="blog-title-container">
         <h2 class="blog-title" id="blog">Blog</h2>
         <div class="blog-title-description">
-            <p>Desde una perspectiva informal, hablamos de datos en geointeligencia, demografía, deportes y otros.</p>
+            <p>Desde una perspectiva informal, hablamos de datos en geointeligencia, cartografía, deportes y otros.</p>
         </div>
     </div>
     <div class="posts-list">
