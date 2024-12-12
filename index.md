@@ -12,7 +12,7 @@ title: "Binadrish - Blog"
                     </p> <!-- Cambia 'descripcion' por el campo adecuado -->
         </section>
         <div class="landing-img">
-            <img src="/assets/images/landing.jpg" alt="{{ post.title }}">
+            <img src="/assets/images/landing.gif" alt="{{ post.title }}">
         </div>
     </div>
     <div class="blog-title-container">

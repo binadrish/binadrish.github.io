@@ -11,6 +11,20 @@ title: "Binadrish - Porfolio"
                 <p>Eng. Computer Systems</p> <!-- Cambia 'titulo' por el campo adecuado de tu documento -->
                 <br>
                 <h4 class="puesto">Software Developer | Data Researcher</h4>
+                <div class="social-icons" style="text-align:center; margin-top: 20px;">
+                    <a href="https://github.com/binadrish" target="_blank" style="margin-right: 15px;">
+                        <i class="fab fa-github" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dev-adriangr/" target="_blank" style="margin-right: 15px;">
+                        <i class="fab fa-linkedin" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="https://medium.com/@dev.adriangr" target="_blank" style="margin-right: 15px;">
+                        <i class="fab fa-medium" style="font-size: 1.5em;"></i>
+                    </a>
+                    <a href="https://x.com/binadrish" target="_blank" style="margin-right: 15px;">
+                        <i class="fab fa-twitter" style="font-size: 1.5em;"></i>
+                    </a>   
+                </div>
                 <br>
                 <br>
                 <p>Ingeniero en Sistemas Computacionales, especializado en el desarrollo de aplicaciones
@@ -25,20 +39,6 @@ title: "Binadrish - Porfolio"
             </section>
             <section class="post_image">
                 <img class="me_photo" src="/assets/images/adrian2.jpg" alt="AdrianGR">
-                <div class="social-icons" style="text-align:center; margin-top: 20px;">
-                    <a href="https://github.com/binadrish" target="_blank" style="margin-right: 15px;">
-                        <i class="fab fa-github" style="font-size: 1.5em;"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/dev-adriangr/" target="_blank" style="margin-right: 15px;">
-                        <i class="fab fa-linkedin" style="font-size: 1.5em;"></i>
-                    </a>
-                    <a href="https://medium.com/@dev.adriangr" target="_blank">
-                        <i class="fab fa-medium" style="font-size: 1.5em;"></i>
-                    </a>
-                    <a href="https://x.com/binadrish" target="_blank" style="margin-right: 15px;">
-                        <i class="fab fa-twitter" style="font-size: 1.5em;"></i>
-                    </a>   
-                </div>
             </section>
         </div>
         <div class="skills">
@@ -50,8 +50,9 @@ title: "Binadrish - Porfolio"
                 <p>Synersol</p>
                 <br>
                 <p>
-                    Currently engaged in the development and deployment of new web functionalities, leveraging modern web development technologies including HTML, CSS, JavaScript, Node.js, and Python. My role involves designing and implementing user-centric features, optimizing performance, and ensuring cross-platform compatibility to deliver seamless web experiences.
+                    Actualmente involucrado en el desarrollo y despliegue de nuevas funcionalidades web, aprovechando tecnologías modernas de desarrollo web como HTML, CSS, JavaScript, Node.js y Python. Mi rol implica diseñar e implementar características centradas en el usuario, optimizar el rendimiento y garantizar la compatibilidad entre plataformas para ofrecer experiencias web fluidas.
                 </p>
+
             </div>
             <div class="container">
                 <img src="/assets/images/itp.png" alt="Avatar" style="width:90px">
