@@ -13,62 +13,74 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <h1 class="title"><a href="/">BIN<em>ADRI</em>SH</a></h1>
-            <ul class="navbar">
-                <li>
-                    <a href="/#blog">Blog</a>
-                    <a href="/about">Acerca de</a>
-                </li>
-            </ul>
-        </div>      
-        
-    </header>
-    
-    <main>
-        <article class="posts">
-            <div class="posts-head">
-                <div class="posts-img">
+    <div id="halo"></div>
+    <section class="navbar">
+            <div class="navbar-left">
+                <a href="/" class="logo">
+                    <img src="/assets/svg/logo.svg" alt="BINADRISH"/>
+                </a>
+            </div>
+            <div class="navbar-right">
+                <a href="/">Inicio</a>
+                <a href="/about">Acerca de</a>
+            </div>
+    </section>
+    <section class="content">
+        <section class="post-site">
+            <div class="post-site-head">
+                <div class="post-site-img">
                     {% if page.img %}
                         <img src="{{ page.img }}" alt="{{ page.title }}">
                     {% endif %}  
                 </div>
-                <div class="post-title">
-                <h2>{{ page.title }}</h2>
-                <p class="date">{{ page.date | date: "%B / %d / %Y" }}</p>
-                <p class="author">{{page.author}}</p>
-                </div>
+                    <div class="post-site-title">
+                    <h2>{{ page.title }}</h2>
+                    <p class="date">{{ page.date | date: "%B / %d / %Y" }}</p>
+                    <p class="author">{{page.author}}</p>
+                    </div>
             </div>
-            <div class="content">
-                {{ content }}
+            <div class="post-site-content">
+                <p>{{ content }}</p>
             </div>
-        </article>
-    </main>
+        </section>
+    </section>
 
-    <footer class="contact">
-        <div class="social-contact" id="contact">
-            <div class="social-title" >
-                <p>Email: dev.adriangr@gmail.com</p>
-                <p>&copy; {{ site.time | date: "%Y" }} Hecho por <a href="/about">AdrianGR</a></p>
+     <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="/" class="logo">
+                    <img src="/assets/svg/logo.svg" alt="BINADRISH" height="50" />
+                </a>
+                <p >Hecho por <a href="/about">AdrianGR</a></p>
             </div>
-            <div class="social-icons" style="text-align:center;">
-                <a href="https://github.com/binadrish" target="_blank" style="margin-right: 15px;">
-                    <i class="fab fa-github" style="font-size: 1.5em;"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/dev-adriangr/" target="_blank" style="margin-right: 15px;">
-                    <i class="fab fa-linkedin" style="font-size: 1.5em;"></i>
-                </a>
-                <a href="https://medium.com/@dev.adriangr" target="_blank" style="margin-right: 15px;">
-                    <i class="fab fa-medium" style="font-size: 1.5em;"></i>
-                </a>
-                <a href="https://x.com/binadrish" target="_blank">
-                    <i class="fab fa-twitter" style="font-size: 1.5em;"></i>
-                </a>   
+            <div class="footer-right">
+                <div class="social-icons" style="padding-bottom: 20px;">
+                    <a href="https://github.com/binadrish" target="_blank">
+                        <i class="fab fa-github" style="font-size: 1.5em; padding-right: 10px;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dev-adriangr/" target="_blank" >
+                        <i class="fab fa-linkedin" style="font-size: 1.5em; padding-right: 10px;"></i>
+                    </a>
+                    <!-- <a href="https://medium.com/@dev.adriangr" target="_blank">
+                        <i class="fab fa-medium" style="font-size: 1.5em;"></i>
+                    </a> -->
+                    <a href="https://x.com/binadrish" target="_blank">
+                        <i class="fab fa-twitter" style="font-size: 1.5em; "></i>
+                    </a>   
+                </div>
+
+                <div class="footer-mail">
+                    <a href="mailto:dev.adriangr@gmail.com">
+                        <i class="fas fa-envelope" style="font-size: 1.5em;"></i>
+                        dev.adriangr@gmail.com
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
     
 </body>
+<script src="/assets/js/cursorAnimation.js"></script>
+
 </html>
 

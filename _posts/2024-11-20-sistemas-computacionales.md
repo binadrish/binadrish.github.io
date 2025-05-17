@@ -4,7 +4,7 @@ title: "Sistemas computacionales"
 excerpt: "Un sistema computacional es un conjunto de componentes que trabajan en conjunto para procesar y gestionar información."
 author: "Adrian Galvan R."
 date: 2024-11-20
-categories: [blog]
+categories: [blog, Programación]
 img: "/assets/images/pst-minis/pst-1.jpg"
 ---
 

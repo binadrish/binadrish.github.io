@@ -4,45 +4,71 @@ title: "Binadrish - Blog"
 ---
 
 
-<html lang="es">    
-    <div class="landing-msg-container">
-        <section class="landing-msg">
-                    <h2>Transformando datos en historias</h2>
-                    <p>Mi misión es guiarte a través del mundo del analisis y las ciencias de la computación para encontrar soluciones a problemas reales
-                    </p> <!-- Cambia 'descripcion' por el campo adecuado -->
+<html lang="es">
+        <header>
+        <h1>Transformando datos en <span>historias</span></h1>
+            <p>Una colección de crónicas, columnas y artículos sobre informatica y sus aplicaciones en la vida diaria.</p>
+        </header>
+        <section class="cover">
+            {% assign latest_post = site.posts.first %}
+                    <a href="{{ latest_post.url }}" class="cover-link">
+                    <div class="cover-img">
+                            {% if latest_post.img %}
+                                <img src="{{ latest_post.img }}" alt="{{ latest_post.title }}">
+                            {% endif %}
+                        </div>
+                        <div class="cover-info" >
+                            <div class="cover-info-head">
+                                <div class="cover-info-title">
+                                    <h2>{{ latest_post.title }}</h2>
+                                </div>
+                                <div class="cover-info-date">
+                                    <i><span>{{ latest_post.date | date: "%B / %d /%Y" }}</span></i>
+                                </div>
+                                <div class="cover-info-description">
+                                   <p>
+                                   {{ latest_post.excerpt }}
+                                   </p> 
+                                </div>
+                                <div class="cover-info-tag">
+                                    {% for cat in latest_post.categories %}
+                                        <span class="tag">{{ cat }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+        </section> 
+        <section class="posts">
+            <h1>Todas las publicaciones</h1>
+            <p></p>
+            <section class="all-posts">
+                {% for post in site.posts %}
+                    <div class="post-container">
+                        <a href="{{ post.url }}" class="post-link">
+                        <div class="post-img">
+                            {% if post.img %}
+                                <img src="{{ post.img }}" alt="{{ post.title }}">
+                                {% endif %}  
+                            </div>
+                            <div class="post-info">
+                                <div class="post-info-head">
+                                    <div class="post-info-title">
+                                        <h2>{{ post.title }}</h2>
+                                    </div>
+                                    <div class="post-info-date">
+                                       <i><span>{{ post.date | date: "%B / %d /%Y" }}</span></i>
+                                    </div>
+                                    <div class="post-info-tag">
+                                        {% for cat in post.categories %}
+                                            <span class="tag">{{ cat }}</span>
+                                        {% endfor %}  
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </section>
         </section>
-        <div class="landing-img">
-            <img src="/assets/images/landing.gif" alt="{{ post.title }}">
-        </div>
-    </div>
-    <div class="blog-title-container">
-        <h2 class="blog-title" id="blog">Blog</h2>
-        <div class="blog-title-description">
-            <p>Desde una perspectiva informal, hablamos de datos en geointeligencia, cartografía, deportes y otros.</p>
-        </div>
-    </div>
-    <div class="posts-list">
-    {% for post in site.posts %}
-        <div class="pst-format-container">
-            <a href="{{ post.url }}" class="ag-courses-item_link">
-                <div class="pst-header">
-                    <div class="pst-courses-item_title">
-                        <div class="pst-item-title-container">
-                            {{ post.title }}
-                        </div>
-                        <div class="pst-courses-item_date">
-                            {{ post.date | date: "%B / %d /%Y" }}    
-                        </div>
-                    </div>
-                    <div class="pst-description">
-                        {{ post.excerpt }}
-                    </div>
-                </div>
-                    {% if post.img %}
-                    <img src="{{ post.img }}" alt="{{ post.title }}">
-                    {% endif %}  
-            </a>
-        </div>
-    {% endfor %}
-    </div>
 

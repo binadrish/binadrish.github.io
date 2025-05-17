@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tasas de cambio demográfico"
-excerpt: "Exploramos algunos tipos de tasas de cambio demográfico y sus causas"
+excerpt: "Exploramos algunos tipos de tasas de <span>cambio demográfico</span> y sus causas"
 author: "Adrian Galvan R."
 date: 2024-11-21
 categories: [blog]
