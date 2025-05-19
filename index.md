@@ -57,7 +57,7 @@ title: "Binadrish - Blog"
                                         <h2>{{ post.title }}</h2>
                                     </div>
                                     <div class="post-info-date">
-                                       <p><i><span>{% include fecha_es.html date=post.date %}</span></i></p>
+                                       <i><span>{% include fecha_es.html date=post.date %}</span></i> 
                                     </div>
                                     <div class="post-info-tag">
                                         {% for cat in post.categories %}

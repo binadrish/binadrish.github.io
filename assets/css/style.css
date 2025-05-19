@@ -261,7 +261,7 @@ footer{
 
 .personal-profile-right h1{
     margin-bottom: 20px;
-    font-size: clamp(1.8rem, 1vw + 0.7rem, 2rem);
+    font-size: clamp(1.8rem, 1vw + 1rem, 2rem);
 }
 
 .personal-profile-right p{
@@ -442,10 +442,10 @@ header h1{
     align-items: center;
     justify-content: center;
     width: 80%;
-    max-width: 600px;
+    max-width: 800px;
     margin-bottom: 2em;
     border-radius: 5px;
-    overflow: hidden;
+    
 }
 .cover-link{
     display: flex;
@@ -463,7 +463,7 @@ header h1{
 .cover-link:hover{
     background-color: var(--concrete-white);
     color: var(--resolution-blue);
-    box-shadow: -4px 4px 15px -10px var(--resolution-blue);
+    box-shadow: -4px 4px 15px -10px var(--resolution-blue); 
     transform: translateY(-6px);
     transition: all 0.3s ease-in-out;
 }
@@ -506,7 +506,7 @@ header h1{
 
 }
 
-.cover-info-dates{
+.cover-info-date{
     display: flex;
     flex-direction: row;
     align-items: start;
