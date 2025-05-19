@@ -52,6 +52,31 @@ body {
   transition: background-position; /* 0.2 s de retardo */
 }
 
+/* Contenedor relativo para poder posicionar el botón */
+.post-site-content pre {
+  position: relative;
+  padding-top: 2.5em;      /* deja espacio arriba para el botón */
+}
+
+/* Botón de copia */
+.post-site-content .copy-btn {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 0.2em 0.6em;
+  border-radius: 0.3em;
+  font-size: 0.875rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.post-site-content .copy-btn:hover {
+  opacity: 1;
+}
+
 
 h1{
     font-size: clamp(1.8rem, 1vw + 0.7rem, 2rem);
@@ -203,10 +228,17 @@ footer{
     width: 80%;
     max-width: 800px;
     padding: 1em;
-    margin-bottom: 2em;
-    margin-top: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
+.personal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 
 .personal-profile{
     display: flex;
@@ -254,9 +286,11 @@ footer{
     width: 80%;
     max-width: 800px;
     padding: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 
 }
+
+.experience-container h2{padding-bottom: 0;}
 
 .experience-list{
     display: flex;
@@ -394,7 +428,8 @@ header{
 }
 
 header p{
-    font-size: clamp(1.2rem, 1vw + 0.6rem, 1.6rem);
+    font-size: clamp(1.2rem, 1vw + 0.5rem, 1.6rem);
+    padding-bottom: 1em;
 }
 
 header h1{
@@ -641,20 +676,74 @@ header h1{
     padding: 1em;
     margin: 1em;
 }
-
-.post-site-content{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    max-width: 800px;
-    padding: 1em;
-    margin: 1em;
+.post-site-content {
+  /* Mejor flujo de texto sin sorpresas de flex */
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;         /* centra horizontalmente en pantallas grandes */
+  padding: 1em;
 }
 
-.post-site-content p{
-    font-size: clamp(1rem, 1vw + 0.3rem, 2rem);
-    padding-bottom: 1.5em;
+/* Encabezados dentro del contenido */
+.post-site-content h1,
+.post-site-content h2,
+.post-site-content h3,
+.post-site-content h4 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  line-height: 1.2;
+}
+
+/* Párrafos */
+.post-site-content p {
+  font-size: clamp(1rem, 1vw + 0.3rem, 1.25rem);
+  line-height: 1.6em;
+  margin-bottom: 1.5em;
+}
+
+/* Listas */
+.post-site-content ul,
+.post-site-content ol {
+  margin: 1em 0 1.5em 1.5em;
+}
+
+/* Ítems de lista para más espacio */
+.post-site-content li {
+  margin-bottom: 1em;
+}
+
+/* Imágenes responsivas */
+.post-site-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5em auto;
+}
+
+/* Bloques de código */
+.post-site-content pre {
+    background-color: #F2F2F280;
+    backdrop-filter: blur(10px); /* Efecto blur */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+    overflow-x: auto;
+    padding: 1em;
+    border-radius: 0.5em;
+    margin: 1.5em 0;
+}
+
+/* Código inline */
+.post-site-content code {
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+
+/* Enlaces */
+.post-site-content a {
+  color: #007acc;
+  text-decoration: underline;
 }
 
 .post-site-head{
