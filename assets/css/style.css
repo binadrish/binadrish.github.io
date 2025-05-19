@@ -63,7 +63,7 @@ body {
   position: absolute;
   top: 0.5em;
   right: 0.5em;
-  background: #007acc;
+  background: var(--resolution-blue);
   color: white;
   border: none;
   padding: 0.2em 0.6em;
@@ -730,6 +730,7 @@ header h1{
     padding: 1em;
     border-radius: 0.5em;
     margin: 1.5em 0;
+    box-shadow: -4px 4px 15px -10px #2E319290;
 }
 
 /* Código inline */
@@ -742,7 +743,7 @@ header h1{
 
 /* Enlaces */
 .post-site-content a {
-  color: #007acc;
+  color:var(--resolution-blue);
   text-decoration: underline;
 }
 
@@ -752,10 +753,13 @@ header h1{
     align-items: center;
     justify-content: center;
     padding: 1em;
-    gap: 1em;
+    gap: 1.5em;
     overflow: hidden;
     width: 100%;
     background-color: var(--solitude-blue);
+    box-shadow: -4px 4px 15px -10px var(--resolution-blue);
+    margin-bottom: 2em;
+
 }
 
 .post-site-title{
