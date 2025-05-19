@@ -28,19 +28,33 @@
     <section class="content">
         <section class="post-site">
             <div class="post-site-head">
+                <div class="post-site-title">
+                    <h2>{{ page.title }}</h2>
+                    <div class="post-site-date">
+                    <span>{% include fecha_es.html date=page.date %}</span>
+                    </div>
+                    <div class="post-site-author">
+                    <p class="author">{{page.author}}</p>
+                    </div>
+                    <div class="post-site-description">
+                        <p>
+                        {{ page.excerpt }}
+                        </p> 
+                    </div>
+                    <div class="post-site-tag">
+                        {% for cat in page.categories %}
+                            <span class="tag">{{ cat }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
                 <div class="post-site-img">
                     {% if page.img %}
                         <img src="{{ page.img }}" alt="{{ page.title }}">
                     {% endif %}  
                 </div>
-                    <div class="post-site-title">
-                    <h2>{{ page.title }}</h2>
-                    <p class="date">{{ page.date | date: "%B / %d / %Y" }}</p>
-                    <p class="author">{{page.author}}</p>
-                    </div>
             </div>
             <div class="post-site-content">
-                <p>{{ content }}</p>
+                {{ content }}
             </div>
         </section>
     </section>

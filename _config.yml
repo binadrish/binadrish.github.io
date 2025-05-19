@@ -8,3 +8,7 @@ permalink: /:title/
 markdown: kramdown
 kramdown:
   input: GFM
+es:
+  date:
+    formats:
+      long: "%d de %B de %Y"

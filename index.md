@@ -23,7 +23,7 @@ title: "Binadrish - Blog"
                                     <h2>{{ latest_post.title }}</h2>
                                 </div>
                                 <div class="cover-info-date">
-                                    <i><span>{{ latest_post.date | date: "%B / %d /%Y" }}</span></i>
+                                    <i><span>{% include fecha_es.html date=latest_post.date %}</span></i>
                                 </div>
                                 <div class="cover-info-description">
                                    <p>
@@ -57,7 +57,7 @@ title: "Binadrish - Blog"
                                         <h2>{{ post.title }}</h2>
                                     </div>
                                     <div class="post-info-date">
-                                       <i><span>{{ post.date | date: "%B / %d /%Y" }}</span></i>
+                                       <p><i><span>{% include fecha_es.html date=post.date %}</span></i></p>
                                     </div>
                                     <div class="post-info-tag">
                                         {% for cat in post.categories %}
