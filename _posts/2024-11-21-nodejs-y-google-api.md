@@ -4,8 +4,8 @@ title: "NodeJS y Google API"
 excerpt: "Exploramos una biblioteca oficial de google para nodeJS."
 author: "Adrian Galvan R."
 date: 2024-11-21
-categories: [blog]
-img: "/assets/images/pst-minis/pst-3.jpg"
+categories: [artículo]
+img: "https://images.unsplash.com/photo-1600783245777-080fd7ff9253?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
 `google-api-nodejs-client` es una biblioteca oficial de Google para Node.js que permite interactuar con diversas APIs de Google de manera sencilla. Esta biblioteca facilita la integración de servicios de Google, como Google Drive, Google Sheets, Google Calendar, Gmail, YouTube, y muchos más, en aplicaciones Node.js.
 ### Documentación oficial

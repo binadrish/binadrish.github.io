@@ -4,8 +4,8 @@ title: "API un estándar en la industria"
 excerpt: "Aprende que es una API y cuales son sus usos en el desarrollo web"
 author: "Adrian Galvan R."
 date: 2024-11-20
-categories: [blog, Programación]
-img: "/assets/images/pst-minis/pst-1.jpg"
+categories: [artículo, Programación]
+img: "https://images.unsplash.com/photo-1702822903685-d9ec6004653b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
 Una **API** (Application Programming Interface, o Interfaz de Programación de Aplicaciones) es un conjunto de reglas, protocolos y herramientas que permiten que dos aplicaciones o sistemas se comuniquen entre sí. Las APIs actúan como intermediarias, permitiendo que un software solicite servicios o datos a otro software sin necesidad de conocer los detalles de su implementación interna.
 

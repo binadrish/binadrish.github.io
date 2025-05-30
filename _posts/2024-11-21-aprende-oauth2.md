@@ -4,8 +4,8 @@ title: "Aprende Oauth2.0"
 excerpt: "Entremos en el mundo de la autenticación con Oauth2.0"
 author: "Adrian Galvan R."
 date: 2024-11-21
-categories: [blog]
-img: "/assets/images/pst-minis/pst-2.jpg"
+categories: [artículo]
+img: "https://images.unsplash.com/photo-1635237393049-55046279ebb8?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
 
 **OAuth 2.0** es un protocolo de autorización ampliamente utilizado que permite a las aplicaciones acceder a recursos protegidos en nombre de un usuario, sin necesidad de compartir las credenciales del usuario (como su nombre de usuario y contraseña). Es el estándar de facto para la autorización en aplicaciones web, móviles y de escritorio.
