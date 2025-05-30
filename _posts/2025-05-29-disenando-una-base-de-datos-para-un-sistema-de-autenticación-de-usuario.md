@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Diseñando de una base de datos para un sistema de autenticación de usuario"
-excerpt: "Descubre como utilizar uno de los identificadores más utilizados en la actualidad"
+excerpt: "Revisemos los criterios necesarios para crear un buen sistema de autenticación"
 author: "Adrian Galvan R."
 date: 2025-05-29
-categories: [artículo, Bases de datos]
+categories: [artículo, bases de datos]
 img: "https://images.unsplash.com/photo-1633265486064-086b219458ec?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
 
