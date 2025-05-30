@@ -101,8 +101,6 @@ Si contemplamos desde un inicio el uso de tokens en nuestro sistema para mantene
 
 Este acercamiento es un buen punto de partida para el diseño de una base de datos para un sistema de autenticación de usuario, sin embargo es interesante investigar que hay otras extensiones comúnmente utilizadas para fortalecerlo:
 
-Para un proyecto pequeño, esto debería ser suficiente para empezar a validar usuarios, sin embargo, existen otras entidades normalmente utilizadas para escalar el sistema de autenticación ejemplo:
-
 - Tabla de `password_resets` para recuperación de contraseña.
     
 - Tabla de `login_attempts` o `audit_logs` para registrar actividad.
