@@ -4,7 +4,7 @@ title: "Aprende Oauth2.0"
 excerpt: "Entremos en el mundo de la autenticación con Oauth2.0"
 author: "Adrian Galvan R."
 date: 2024-11-21
-categories: [artículo]
+categories: [artículo, programación]
 img: "https://images.unsplash.com/photo-1635237393049-55046279ebb8?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
 
