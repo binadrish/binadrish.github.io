@@ -78,26 +78,26 @@ Una vez definido que tipo de identificador se va a utilizar,  averigua ¿Qué in
 
 | Campo           | Tipo de dato               | Descripción                                                  |
 | --------------- | -------------------------- | ------------------------------------------------------------ |
-| `id`            | `UUID` o `SERIAL`          | Identificador único. UUID recomendado para escalabilidad.    |
-| `email`         | `VARCHAR(255)`             | Correo del usuario, debe ser único y obligatorio.            |
-| `password_hash` | `VARCHAR(255)`             | Almacena el hash seguro de la contraseña.                    |
-| `created_at`    | `TIMESTAMP WITH TIME ZONE` | Fecha de creación del usuario.                               |
-| `updated_at`    | `TIMESTAMP WITH TIME ZONE` | Última actualización. Puede usarse con triggers.             |
-| `is_active`     | `BOOLEAN`                  | Estado activo/inactivo de la cuenta.                         |
-| `role`          | `VARCHAR(50)`              | Rol del usuario, útil para autorización (user, admin, etc.). |
+| `id`            | UUID o SERIAL          | Identificador único. UUID recomendado para escalabilidad.    |
+| `email`         | VARCHAR(255)             | Correo del usuario, debe ser único y obligatorio.            |
+| `password_hash` | VARCHAR(255)             | Almacena el hash seguro de la contraseña.                    |
+| `created_at`    | TIMESTAMP WITH TIME ZONE | Fecha de creación del usuario.                               |
+| `updated_at`    | TIMESTAMP WITH TIME ZONE | Última actualización. Puede usarse con triggers.             |
+| `is_active`     | BOOLEAN                  | Estado activo/inactivo de la cuenta.                         |
+| `role`          | VARCHAR(50)              | Rol del usuario, útil para autorización (user, admin, etc.). |
 
 Si contemplamos desde un inicio el uso de tokens en nuestro sistema para mantener al usuario autenticado mientras navega, hay que relacionar los tokens con los usuarios, declaramos que **cada usuario puede tener n cantidad de tokens** y **un token solo puede estar enlazado a un solo usuario**, en la siguiente tabla podemos ver una propuesta que se acopla con nuestra entidad `user` y permitiría implementar tokens en un sistema de autenticación:
 ### Tabla: `token`
 
 | Campo        | Tipo de dato               | Descripción                                               |
 | ------------ | -------------------------- | --------------------------------------------------------- |
-| `id`         | `UUID`                     | Identificador único del token.                            |
-| `user_id`    | `UUID`                     | Relación con la tabla `users`. Clave foránea.             |
-| `token`      | `TEXT`                     | El valor del token. Puede ser JWT o string generado.      |
-| `type`       | `VARCHAR(50)`              | Define el propósito del token.                            |
-| `expires_at` | `TIMESTAMP WITH TIME ZONE` | Fecha y hora de expiración.                               |
-| `created_at` | `TIMESTAMP WITH TIME ZONE` | Fecha en que fue generado el token.                       |
-| `revoked`    | `BOOLEAN`                  | Indica si el token fue invalidado antes de su expiración. |
+| `id`         | UUID                     | Identificador único del token.                            |
+| `user_id`    | UUID                     | Relación con la tabla `user`. Clave foránea.             |
+| `token`      | TEXT                     | El valor del token. Puede ser JWT o string generado.      |
+| `type`       | VARCHAR(50)              | Define el propósito del token.                            |
+| `expires_at` | TIMESTAMP WITH TIME ZONE | Fecha y hora de expiración.                               |
+| `created_at` | TIMESTAMP WITH TIME ZONE | Fecha en que fue generado el token.                       |
+| `revoked`    | BOOLEAN                  | Indica si el token fue invalidado antes de su expiración. |
 
 Este acercamiento es un buen punto de partida para el diseño de una base de datos para un sistema de autenticación de usuario, sin embargo es interesante investigar que hay otras extensiones comúnmente utilizadas para fortalecerlo:
 
