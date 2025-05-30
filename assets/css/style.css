@@ -675,6 +675,7 @@ header h1{
     max-width: 800px;
     padding: 1em;
     margin: 1em;
+    overflow-x: hidden;
 }
 .post-site-content {
   /* Mejor flujo de texto sin sorpresas de flex */
@@ -702,16 +703,24 @@ header h1{
   margin-bottom: 1.5em;
 }
 
-/* Listas */
+/* Ajustes para listas largas y responsive */
 .post-site-content ul,
 .post-site-content ol {
   margin: 1em 0 1.5em 1.5em;
+  padding-left: 1.5em;
+  overflow-x: auto;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
-/* Ítems de lista para más espacio */
+/* Ítems de lista */
 .post-site-content li {
   margin-bottom: 1em;
+  line-height: 1.6;
+  overflow-wrap: anywhere; /* Forza el corte de palabras largas */
+  max-width: 100%;
 }
+
 
 /* Imágenes responsivas */
 .post-site-content img {
