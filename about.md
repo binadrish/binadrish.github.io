@@ -52,7 +52,7 @@ title: "Binadrish - Porfolio"
                         </div>
                     </div>
                     <div class="experience-element-description">
-                        <p>Responsable del <span>desarrollo e integración de módulos backend</span> para distintas plataformas web, utilizando  <span>Node.js, TypeScript y Strapi</span>. Implemento APIs, gestiono servicios externos y contribuyo al diseño de arquitecturas escalables.</p>
+                        <p>Responsable del <span>desarrollo e integración de módulos backend</span> para distintas plataformas web, utilizando  <span>Node.js, JavaScript y Strapi</span>. Implemento APIs, gestiono servicios externos y contribuyo al diseño de arquitecturas escalables.</p>
                     </div>
                 </div>
                 <div class="experience-element">
