@@ -46,13 +46,13 @@ title: "Binadrish - Porfolio"
                         <img src="/assets/images/syner.jpeg" alt="Synersol">
                         </div>
                         <div class="experience-element-info-text">
-                            <h2>Desarrollador Back-end</h2>
+                            <h2>Desarrollador Full-Stack</h2>
                             <span>Synergy Dev</span>
                             <i>dic. 2024 - Actualmente.</i>
                         </div>
                     </div>
                     <div class="experience-element-description">
-                        <p>Responsable del <span>desarrollo e integración de módulos backend</span> para distintas plataformas web, utilizando  <span>Node.js, JavaScript y Strapi</span>. Implemento APIs, gestiono servicios externos y contribuyo al diseño de arquitecturas escalables.</p>
+                        <p>Responsable del <span>desarrollo e integración de módulos full-stack</span> para distintas plataformas web, utilizando  <span>Node.js, JavaScript y Strapi</span>. Implemento APIs, gestiono servicios externos y contribuyo al diseño de arquitecturas escalables.</p>
                     </div>
                 </div>
                 <div class="experience-element">
