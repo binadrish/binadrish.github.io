@@ -1,110 +1,139 @@
 ---
 layout: post
-title: "Diseñando de una base de datos para un sistema de autenticación de usuario"
+title: "Integraciones con Gemini: Chat Inteligente desde el terminal en python"
 excerpt: "Revisemos los criterios necesarios para crear un buen sistema de autenticación"
 author: "Adrian Galvan R."
-date: 2025-05-29
-categories: [artículo, bases de datos]
-img: "https://images.unsplash.com/photo-1633265486064-086b219458ec?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+date: 2025-06-19
+categories: [artículo, inteligencia artificial]
+img: "https://images.unsplash.com/photo-1710993011904-8f1162b9806d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+---
+**Gemini** es una familia de modelos de inteligencia artificial desarrollada por **Google DeepMind**, ampliamente utilizada en la actualidad. Se trata de modelos **multimodales**, lo que significa que pueden procesar y generar distintos tipos de contenido: texto, código, imágenes, audio y video.
+
+Aunque su potencial va mucho más allá, en este artículo nos centraremos en dos herramientas clave que permiten **integrar Gemini en tus aplicaciones de forma gratuita**:
+
+- **Gemini API**
+- **Google GenAI SDK**
+
+Ambas herramientas te permitirán experimentar con los modelos más avanzados de Google sin necesidad de infraestructura compleja.
+
+### Gemini API
+
+La **Gemini API** es una interfaz que permite a desarrolladores acceder a los modelos de lenguaje (LLM) de Google de forma programática. En esencia, la API actúa como un puente, permitiendo que tu software interactúe con estos modelos para realizar tareas como generar texto, traducir idiomas, responder preguntas y más.
+
+### Google GenAI SDK
+
+Google GenAI conjunto de bibliotecas que brindan una interfaz unificada para acceder a los modelos de IA generativos de Google a través de la API para desarrolladores de Gemini y Vertex AI. Actualmente está disponible para varios lenguajes: Python, JavaScript/TypeScript, GO, y Java.
+
+El SDK de Google Gen AI es ahora la ruta recomendada para acceder a todos los modelos de Google y todos los fragmentos de código en nuestra documentación utilizan estas bibliotecas.
+
+## Integración en Python paso a paso
+
+### 1. Instalación
+
+Primero, instala el paquete oficial usando `pip`:
+
+```bash
+pip install -q -U google-genai
+```
+
+> Asegúrate de tener una **clave API activa**, que puedes obtener desde el portal de Gemini: [ai.google.dev](https://ai.google.dev/)
+
 ---
 
-El objetivo principal de implementar un sistema de autenticación es identificar de manera única a los usuarios que interactúan con una plataforma. Esta identificación permite ofrecer una experiencia personalizada, restringir el acceso a ciertas funcionalidades según el nivel de permisos del usuario y, en general, mantener la integridad y seguridad del sistema.
-## Eligiendo un identificador
+### 2. Primer ejemplo: generar texto con un prompt
 
-Dado que el usuario es el actor principal dentro del sistema, una de las primeras decisiones de diseño que debemos tomar es: **¿Cómo lo vamos a autenticar?** 
+```python
+from google import genai
 
-Independientemente de qué información adicional decidamos almacenar, todo sistema de autenticación tiene un identificador de usuario, y debe cumplir ciertas propiedades esenciales:
+client = genai.Client(api_key="YOUR_API_KEY")
 
-- **Unicidad:** Cada usuario debe tener un identificador exclusivo.
-    
-- **Inmutabilidad:** El identificador no debe cambiar con el tiempo.
-    
-- **Consistencia:** Debe poder usarse como referencia confiable en otros sistemas (como sesiones, tokens o logs).
+response = client.models.generate_content(
+    model="gemini-2.5-flash", 
+    contents="Explain how AI works in a few words"
+)
 
-En general, los sistemas usan identificadores **no secuenciales** (como UUIDs) o **secuenciales** (auto-incrementales), y a veces soluciones híbridas (Snowflake, ULID) que combinan marca de tiempo y componentes aleatorios. Estas opciones garantizan unicidad, escalabilidad y, en muchos casos, permiten ordenar registros por fecha de creación de forma natural.
+print(response.text)
+```
 
-En este artículo no profundizamos cada uno, pero es importante tenerlos en cuenta a la hora de construir tus bases de datos.
+Este código envía un mensaje al modelo y muestra su respuesta. Puedes cambiar el `prompt` para experimentar con otras instrucciones.
 
-En primera instancia podría ser tentador optar por utilizar, por ejemplo, el correo electrónico como ID, es único de eso podemos estar seguros, pero podemos enumerar algunas aspectos que no se solventan:
+---
 
-1. **Pueden cambiar**: El correo o nombre de usuario no son inmutables; si cambian, habría que actualizar múltiples registros.
-    
-2. **No garantizan unicidad global**: Atributos como el nombre pueden repetirse y no son únicos en todos los contextos.
-    
-3. **Exponen datos sensibles**: Usarlos en rutas o tokens puede comprometer la privacidad del usuario.
-    
-4. **Rompen la separación lógica**: Mezclan la lógica interna del sistema con atributos orientados al usuario o interfaz.
-    
-5. **Dificultan integraciones**: Si cambian, pueden romper referencias en otras tablas o sistemas conectados.
+### 3. Chat en terminal con entrada dinámica
 
-Por eso, se recomienda usar un identificador abstracto, como un número secuencial o UUID, que sea **único, inmutable y sin significado personal**.
+Puedes convertir este ejemplo en un **chat en tiempo real desde la terminal** simplemente usando un bucle:
 
-## Tokens de autenticación
+```python
+from google import genai
 
-Un **token** en el contexto de un sistema de autenticación de usuarios es una **cadena de texto** (generalmente en formato codificado como JWT - JSON Web Token) que representa de forma segura la **identidad de un usuario autenticado**. Su propósito principal es permitir que un sistema reconozca a un usuario después de que ha iniciado sesión, sin necesidad de pedirle las credenciales constantemente.
-### ¿Qué contiene un token?
+client = genai.Client(api_key="YOUR_API_KEY")
 
-Un token típicamente incluye:
+while True:
+    prompt = input("You-> ")
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt
+    )
+    print("GemiPy->", response.text)
+```
 
-- **Identificador del usuario** (por ejemplo, su ID).
-    
-- **Tiempo de expiración** (cuándo deja de ser válido).
-    
-- **Datos adicionales** (como roles, permisos o claims personalizados).
-    
-- **Firma digital** (para evitar que sea alterado por terceros).
+---
 
-### ¿Cómo funciona en un flujo de inicio de sesión?
+### 4. Instrucciones del sistema y sesiones personalizadas
 
-1. **Inicio de sesión:**  
-    El usuario envía su correo y contraseña al backend.
-    
-2. **Validación:**  
-    El backend verifica las credenciales. Si son correctas, **genera un token** y lo envía de vuelta al cliente (por ejemplo, una app o el navegador).
-    
-3. **Almacenamiento:**  
-    El cliente guarda el token (usualmente en `localStorage`, `sessionStorage` o en una cookie segura).
-    
-4. **Acceso a recursos protegidos:**  
-    En siguientes peticiones, el cliente envía el token en los headers (como `Authorization: Bearer <token>`), y el backend lo **valida** para permitir el acceso.
-    
-5. **Expiración o cierre de sesión:**  
-    Si el token expira o el usuario cierra sesión, ya no será válido y el usuario deberá autenticarse nuevamente.
+Puedes definir un **comportamiento personalizado del modelo** usando instrucciones del sistema. Para ello, importa los tipos necesarios:
 
-## Diseño de la base de datos
+```python
+from google import genai
+from google.genai import types
 
-Una vez definido que tipo de identificador se va a utilizar,  averigua ¿Qué información del usuario vas a almacenar (y cómo)?, esto va a depender de las características de los servicios que se ofrecen detrás del inicio de sesión, pero de manera general podemos considerar los siguientes elementos:
-### Tabla: `user`
+client = genai.Client(api_key="YOUR_API_KEY")
 
-| Campo           | Tipo de dato               | Descripción                                                  |
-| --------------- | -------------------------- | ------------------------------------------------------------ |
-| `id`            | UUID o SERIAL          | Identificador único. UUID recomendado para escalabilidad.    |
-| `email`         | VARCHAR(255)             | Correo del usuario, debe ser único y obligatorio.            |
-| `password_hash` | VARCHAR(255)             | Almacena el hash seguro de la contraseña.                    |
-| `created_at`    | TIMESTAMP WITH TIME ZONE | Fecha de creación del usuario.                               |
-| `updated_at`    | TIMESTAMP WITH TIME ZONE | Última actualización. Puede usarse con triggers.             |
-| `is_active`     | BOOLEAN                  | Estado activo/inactivo de la cuenta.                         |
-| `role`          | VARCHAR(50)              | Rol del usuario, útil para autorización (user, admin, etc.). |
+chat = client.chats.create(
+    model="gemini-1.5-flash",
+    config=types.GenerateContentConfig(
+        system_instruction="You are a terminal AI agent for AdrianGR. Respond only with plain text."
+    )
+)
 
-Si contemplamos desde un inicio el uso de tokens en nuestro sistema para mantener al usuario autenticado mientras navega, hay que relacionar los tokens con los usuarios, declaramos que **cada usuario puede tener n cantidad de tokens** y **un token solo puede estar enlazado a un solo usuario**, en la siguiente tabla podemos ver una propuesta que se acopla con nuestra entidad `user` y permitiría implementar tokens en un sistema de autenticación:
-### Tabla: `token`
+while True:
+    message = input("You-> ")
+    response = chat.send_message(message)
+    print("GemiPy->", response.text)
+```
 
-| Campo        | Tipo de dato               | Descripción                                               |
-| ------------ | -------------------------- | --------------------------------------------------------- |
-| `id`         | UUID                     | Identificador único del token.                            |
-| `user_id`    | UUID                     | Relación con la tabla `user`. Clave foránea.             |
-| `token`      | TEXT                     | El valor del token. Puede ser JWT o string generado.      |
-| `type`       | VARCHAR(50)              | Define el propósito del token.                            |
-| `expires_at` | TIMESTAMP WITH TIME ZONE | Fecha y hora de expiración.                               |
-| `created_at` | TIMESTAMP WITH TIME ZONE | Fecha en que fue generado el token.                       |
-| `revoked`    | BOOLEAN                  | Indica si el token fue invalidado antes de su expiración. |
+---
 
-Este acercamiento es un buen punto de partida para el diseño de una base de datos para un sistema de autenticación de usuario, sin embargo es interesante investigar que hay otras extensiones comúnmente utilizadas para fortalecerlo:
+### 5. Salida del chat con palabra clave
 
-- Tabla de `password_resets` para recuperación de contraseña.
-    
-- Tabla de `login_attempts` o `audit_logs` para registrar actividad.
-    
-- `two_factor_enabled`, `phone_number`, etc. para MFA.
+Puedes finalizar el chat detectando una palabra como `"False"` para romper el bucle:
 
-En resumen, un buen diseño de base de datos para un sistema de autenticación no solo parte de elegir el identificador adecuado (UUID, secuencial o híbrido), sino también de estructurar de forma coherente las entidades que soportan el flujo completo de seguridad: usuarios, tokens, restablecimientos de contraseña, verificaciones de correo y registros de actividad. Aplicar hashing fuerte (bcrypt, Argon2), políticas de expiración y revocación de tokens, y mecanismos de auditoría y MFA refuerza la resiliencia ante ataques y facilita el mantenimiento a largo plazo. Con esta base sólida, tu plataforma podrá escalar con confianza, adaptarse a nuevos requisitos de negocio y garantizar la protección de la información de tus usuarios.
+```python
+from google import genai
+from google.genai import types
+
+client = genai.Client(api_key="YOUR_API_KEY")
+
+chat = client.chats.create(
+    model="gemini-1.5-flash",
+    config=types.GenerateContentConfig(
+        system_instruction="You are a terminal AI agent for AdrianGR. Respond only with plain text."
+    )
+)
+
+print("GemiPy-> Hello Adrian. How can I help you?")
+print("You-> ", end="")
+
+while True:
+    message = input()
+    if message == "False":
+        break
+    response = chat.send_message(message)
+    print("\nGemiPy->", response.text)
+    print("\nYou-> ", end="")
+```
+
+**Gemini API** y **Google GenAI SDK** representan una forma moderna, potente y gratuita de integrar modelos de lenguaje de última generación en tus proyectos. Ya sea para prototipar un chatbot, generar contenido o construir un asistente inteligente, estas herramientas están listas para usarse con pocas líneas de código.
+
+Consulta la documentación oficial para más ejemplos y configuraciones avanzadas:
+👉 [https://ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)
