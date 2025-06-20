@@ -52,7 +52,7 @@ title: "Binadrish - Blog"
                             <div class="post-info">
                                 <div class="post-info-head">
                                     <div class="post-info-title">
-                                        <h2>{{ post.title }}</h2>
+                                        <h3>{{ post.title }}</h3>
                                     </div>
                                     <div class="post-info-date">
                                        <i><span>{% include fecha_es.html date=post.date %}</span></i> 
