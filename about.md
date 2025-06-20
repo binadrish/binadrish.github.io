@@ -46,11 +46,11 @@ title: "Binadrish - Porfolio"
                         <div class="experience-element-info-text">
                             <h2>Desarrollador Full-Stack</h2>
                             <span>Synergy Dev</span>
-                            <i>dic. 2024 - Actualmente.</i>
+                            <i>dic. 2024 - may. 2025</i>
                         </div>
                     </div>
                     <div class="experience-element-description">
-                        <p>Responsable del <span>desarrollo e integración de módulos full-stack</span> para distintas plataformas web, utilizando  <span>Node.js, JavaScript y Strapi</span>. Implemento APIs, gestiono servicios externos y contribuyo al diseño de arquitecturas escalables.</p>
+                        <p>Responsable del <span>desarrollo e integración de módulos full-stack</span> para distintas plataformas web, utilizando  <span>Node.js, JavaScript y Express</span>. Implementé APIs, gestioné servicios externos y contribuí al diseño de arquitecturas escalables.</p>
                     </div>
                 </div>
                 <div class="experience-element">
@@ -80,6 +80,8 @@ title: "Binadrish - Porfolio"
                             <h2>Administrador de archivos en la nube</h2>
                             <div class="project-element-tags">
                                 <span class="tag">NodeJS</span>
+                                <span class="tag">ExpressJS</span>
+                                <span class="tag">JWT</span>
                                 <span class="tag">Oauth2.0</span>
                                 <span class="tag">Google API</span>
                             </div>
@@ -103,7 +105,7 @@ title: "Binadrish - Porfolio"
                             </div>
                         </div>
                         <div class="project-element-info-description">
-                            <p>En este proyecto se desarrollo e implementó  un agente AI de n8n impulsado por Geminí destinado a proporcionar soporte técnico de una pagina de cursos y certificaciónes.</p>
+                            <p>En este proyecto se desarrolló e implementó un agente AI de n8n impulsado por Gemini, destinado a proporcionar soporte técnico para una página de cursos y certificaciones.</p>
                         </div>
                     </div>
                 </div>

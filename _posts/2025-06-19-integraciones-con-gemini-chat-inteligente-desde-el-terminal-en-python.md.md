@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Integraciones con Gemini: Chat Inteligente desde el terminal en python"
-excerpt: "Revisemos los criterios necesarios para crear un buen sistema de autenticación"
+title: "Integraciones con Gemini: Chat inteligente desde el terminal en python"
+excerpt: "Una introducción al SDK de Gemini en python con ejemplos"
 author: "Adrian Galvan R."
 date: 2025-06-19
 categories: [artículo, inteligencia artificial]
@@ -133,7 +133,8 @@ while True:
     print("\nYou-> ", end="")
 ```
 
+<br>
+
 **Gemini API** y **Google GenAI SDK** representan una forma moderna, potente y gratuita de integrar modelos de lenguaje de última generación en tus proyectos. Ya sea para prototipar un chatbot, generar contenido o construir un asistente inteligente, estas herramientas están listas para usarse con pocas líneas de código.
 
-Consulta la documentación oficial para más ejemplos y configuraciones avanzadas:
-👉 [https://ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)
+Consulta la documentación oficial para más ejemplos y configuraciones avanzadas [ai.google.dev](https://ai.google.dev/gemini-api/docs).

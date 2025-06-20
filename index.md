@@ -2,12 +2,10 @@
 layout: default
 title: "Binadrish - Blog"
 ---
-
-
 <html lang="es">
         <header>
-        <h1>Transformando datos en <span>historias</span></h1>
-            <p>Una colección de crónicas, columnas y artículos sobre informatica y sus aplicaciones en la vida diaria.</p>
+        <h1>Transformando ideas en <span>software</span></h1>
+            <p>Una colección de artículos sobre informatica, programación y sus aplicaciones en la vida diaria.</p>
         </header>
         <section class="cover">
             {% assign latest_post = site.posts.first %}
@@ -71,4 +69,3 @@ title: "Binadrish - Blog"
                 {% endfor %}
             </section>
         </section>
-

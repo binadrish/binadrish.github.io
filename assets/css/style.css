@@ -43,9 +43,8 @@ body {
   /* Círculo azul suave en var(--x var(--y) */
   background: radial-gradient(
       circle 140px at var(--x) var(--y),
-      rgba(89, 162, 246, 0.45) 0%,     /* centro azul luminoso */
-      rgba(169, 209, 255, 0.25) 30%,
-      rgba(178, 214, 255, 0)    70%
+      rgba(89, 162, 246, 0.267) 5%,     /* centro azul luminoso */
+      rgba(178, 214, 255, 0)    25%
   );
 
   /* Transición suave opcional */
@@ -109,7 +108,7 @@ span{
     border-radius: 5px;
     font-size: .8em;
     margin-right: 0.5em;
-
+    
 }
 
 p{
@@ -163,7 +162,7 @@ header{
     padding: 10px 20px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-    font-size: clamp(1.2rem, 1vw + 0.7rem, 2rem)
+    font-size: clamp(1.2rem, 1vw + 0.7rem, 1.7rem)
 }
 
 .navbar-right a:hover{
@@ -387,11 +386,19 @@ footer{
     box-shadow: -4px 4px 15px -10px var(--resolution-blue);
 }
 
+/* Párrafos */
+.project-element-info-description p {
+  font-size: clamp(1rem, 1vw + 0.3rem, 1.25rem);
+  line-height: 1.6em;
+  margin-bottom: 1.5em;
+}
+
 .project-element-image{
     width: 100%;
 
     overflow: hidden;
 }
+
 
 .project-element-image img{
     width: 100%;
@@ -411,6 +418,14 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    gap: 1em;
+}
+
+.project-element-tags{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
     gap: 1em;
 }
 /* --------------------------------------------------- */
@@ -731,22 +746,24 @@ header h1{
 }
 
 /* Bloques de código */
-.post-site-content pre {
-    background-color: #F2F2F280;
+.post-site-content pre[class*="language-"]  {
+    background-color: #f2f2f280;
     backdrop-filter: blur(10px); /* Efecto blur */
     -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
     overflow-x: auto;
     padding: 1em;
     border-radius: 0.5em;
     margin: 1.5em 0;
+    font-size: 1em;
     box-shadow: -4px 4px 15px -10px #2E319290;
 }
 
 /* Código inline */
-.post-site-content code {
+.post-site-content p code{
   padding: 0.2em 0.4em;
   border-radius: 0.3em;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.85em;
 }
 
 

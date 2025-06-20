@@ -10,7 +10,7 @@ window.addEventListener('pointermove', e => {
 
 function animate() {
   /* factor 0.1 = 10 % de avance por frame → retardo ligero */
-  const ease = 0.1;                      
+  const ease = 0.3;                      
   currentX += (targetX - currentX) * ease;
   currentY += (targetY - currentY) * ease;
 
