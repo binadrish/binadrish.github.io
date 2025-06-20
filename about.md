@@ -2,14 +2,12 @@
 layout: default
 title: "Binadrish - Porfolio"
 ---
-
-
 <html lang="es">
         <section class="personal-info">
             <div class="personal-content">
                 <div class="personal-profile">
                     <div class="personal-profile-left">
-                        <img class="me_photo" src="/assets/images/adrian2.jpg" alt="AdrianGR" >
+                        <img class="me_photo" src="/assets/images/adrian2.webp" alt="AdrianGR" >
                     </div>
                     <div class="personal-profile-right">
                         <h1 class="personal-profile-name"><span>Adrián</span> Galván R.</h1>
@@ -43,7 +41,7 @@ title: "Binadrish - Porfolio"
                 <div class="experience-element">
                     <div class="experience-element-info">
                         <div class="experience-element-info-image">
-                        <img src="/assets/images/syner.jpeg" alt="Synersol">
+                        <img src="/assets/images/syner.webp" alt="Synersol">
                         </div>
                         <div class="experience-element-info-text">
                             <h2>Desarrollador Full-Stack</h2>
@@ -57,7 +55,7 @@ title: "Binadrish - Porfolio"
                 </div>
                 <div class="experience-element">
                     <div class="experience-element-info">
-                        <img src="/assets/images//itp.jpg" alt="ITP">
+                        <img src="/assets/images//itp.webp" alt="ITP">
                         <div class="experience-element-info-text">
                             <h2>Auxiliar de Sistemas </h2>
                             <span>Centro de cómputo del ITP</span>
@@ -111,6 +109,3 @@ title: "Binadrish - Porfolio"
                 </div>
             </div>
         </section>
-
-
-
