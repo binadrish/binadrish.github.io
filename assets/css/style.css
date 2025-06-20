@@ -80,15 +80,15 @@ body {
 h1{
     font-size: clamp(1.8rem, 1vw + 0.7rem, 2rem);
     font-weight: 600;
-    margin-bottom: .8em;
+    line-height: 4lh;
     text-shadow: #2E319220 -4px 4px 5px ;
 }
 
 h2{
-    font-size: clamp(1rem, 1vw + 0.6rem, 2rem);
+    font-size: clamp(1.3rem, 1vw + 0.6rem, 1.5rem);
     font-weight: 600;
     text-shadow: #2E319220 -4px 4px 5px ;
-    padding-bottom: .5em;
+    line-height: 2lh;
 }
 
 
@@ -108,12 +108,13 @@ span{
     border-radius: 5px;
     font-size: .8em;
     margin-right: 0.5em;
+
     
 }
 
 p{
-  font-size: clamp(1rem, 1vw + 0.3rem, 2rem);
-  line-height: 1.8em;
+  font-size: clamp(1.2rem, 1vw + 0.3rem, 1.25rem);
+  line-height: 2lh;
 }
 
 a:hover{
@@ -259,19 +260,31 @@ footer{
 }
 
 .personal-profile-right h1{
-    margin-bottom: 20px;
     font-size: clamp(1.8rem, 1vw + 1rem, 2rem);
 }
 
 .personal-profile-right p{
-    font-size: clamp(1.2rem, 1vw + 0.4rem, 2);
-    margin-bottom: 1.5em;
+    font-size: clamp(1.2rem, 1vw + 0.4rem, 1.25);
     text-shadow: #2E319230 -4px 4px 5px ;
 }
 
-.personal-description p{
-    margin-bottom: 20px;
+
+.personal-profile-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    margin-top: 1lh;
+    margin-bottom: 1lh;
+}
+
+
 /* --------------------------------------------------- */
 
 /* --------------------------------------------------- */
@@ -341,10 +354,8 @@ footer{
     box-shadow: -4px 4px 10px 0px #2E319230;
 }
 
-.experience-element-description{
-    font-size: clamp(1.2rem, 1vw + 0.4rem, 2);
-    margin-bottom: 20px;
-    line-height: 1.5em;
+.experience-element-description p{
+    font-size: clamp(1.2rem, 1vw + 0.4rem, 1.25rem);
 }
 
 /* --------------------------------------------------- */
@@ -389,7 +400,7 @@ footer{
 /* Párrafos */
 .project-element-info-description p {
   font-size: clamp(1rem, 1vw + 0.3rem, 1.25rem);
-  line-height: 1.6em;
+  line-height: 2lh;
   margin-bottom: 1.5em;
 }
 
@@ -443,7 +454,7 @@ header{
 }
 
 header p{
-    font-size: clamp(1.2rem, 1vw + 0.5rem, 1.6rem);
+    font-size: clamp(1.2rem, 1vw + 0.5rem, 1.5rem);
     padding-bottom: 1em;
 }
 
@@ -701,6 +712,11 @@ header h1{
   padding: 1em;
 }
 
+.post-site-title h2{
+    font-size: clamp(1.3rem, 1vw + 0.6rem, 1.8rem);
+    margin-bottom: 1lh;
+}
+
 /* Encabezados dentro del contenido */
 .post-site-content h1,
 .post-site-content h2,
@@ -714,7 +730,7 @@ header h1{
 /* Párrafos */
 .post-site-content p {
   font-size: clamp(1rem, 1vw + 0.3rem, 1.25rem);
-  line-height: 1.6em;
+  line-height: 2lh;
   margin-bottom: 1.5em;
 }
 
@@ -775,26 +791,29 @@ header h1{
 
 .post-site-content th,
 .post-site-content td {
-  border: 1px solid #2E319250;
-  padding: 0.75em 1em;
-  text-align: left;
+    padding: 0.5em 0.5em;
+    border-bottom: 0.25lh solid #cde3ff;  
+    text-align: left;
 }
 
 .post-site-content th {
-  background-color: var(--solitude-blue);
-  font-weight: bold;
+    background-color: #cde3ff;
+
+    font-weight: bold;
 }
 
 /* Contenedor responsivo para tablas */
 .post-site-content table {
-  border-collapse: collapse;
-  margin: 1.5em 0;
-  font-size: clamp(0.6rem, 1vw + 0.1rem, 1rem);
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border-radius: 1px;
+    border-radius: 10px ;
+    -moz-border-radius: 10px  ;
+    -webkit-border-radius: 10px  ;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: clamp(0.8rem, 1vw + 0.1rem, 1rem);
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .post-site-content table thead,

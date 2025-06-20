@@ -12,7 +12,7 @@ title: "Binadrish - Porfolio"
                     <div class="personal-profile-right">
                         <h1 class="personal-profile-name"><span>Adrián</span> Galván R.</h1>
                         <p class="personal-profile-career">Ing. Sistemas Computacionales | Desarrollador de Software</p>
-                        <div class="social-icons" style="padding-bottom: 20px;">
+                        <div class="social-icons">
                             <a href="https://github.com/binadrish" target="_blank">
                                 <i class="fab fa-github" style="font-size: 1.5em; padding-right: 10px;"></i>
                             </a>
