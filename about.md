@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Binadrish - Porfolio"
+title: "Binadrish - Acerca de"
 ---
 <html lang="es">
         <section class="personal-info">

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Binadrish - Blog"
+title: "Binadrish - Inicio"
 ---
 <html lang="es">
         <header>
