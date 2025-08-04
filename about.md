@@ -44,7 +44,7 @@ title: "Binadrish - Acerca de"
                         <img src="/assets/images/syner.webp" alt="Synersol">
                         </div>
                         <div class="experience-element-info-text">
-                            <h2>Desarrollador Full-Stack</h2>
+                            <h2>Ingeniero de Software</h2>
                             <span>Synergy Dev</span>
                             <i>dic. 2024 - may. 2025</i>
                         </div>
