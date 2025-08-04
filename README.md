@@ -1,7 +1,5 @@
 # 👨‍💻 Binadrish - Personal Portfolio & Tech Blog
 
-![Header](https://github.com/binadrish/binadrish.github.io/blob/main/assets/images/adrian2.webp?raw=true)
-
 > **Transformando ideas en software**
 
 ¡Hola! Soy **Adrián Galván R.**, Ingeniero en Sistemas Computacionales y Desarrollador de Software especializado en aplicaciones web, APIs, y automatización de procesos.
